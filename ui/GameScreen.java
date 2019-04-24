@@ -26,9 +26,7 @@ public class GameScreen extends JPanel implements ActionListener {
 	Player player;
 	Apple apple;
 	
-	boolean running = true;
-	Font font =new Font("Helvetica", Font.CENTER_BASELINE, 28);
-	
+		
 	public GameScreen() {
 		setPreferredSize(new Dimension(800, 800));
 		setFocusable(true);
@@ -55,7 +53,6 @@ public class GameScreen extends JPanel implements ActionListener {
 	}
 	private void stopGame() {
 		timer.stop();
-		running = false;
 		repaint();
 	}
 
@@ -83,7 +80,7 @@ public class GameScreen extends JPanel implements ActionListener {
 		g.setColor(Color.BLACK);
 		g.fillRect(0, 0, this.getPreferredSize().width, this.getPreferredSize().height);
 		
-		if (running) {
+		
 			// draw body (not head)
 			g.setColor(Color.YELLOW);
 			for(int i =1; i<player.getBodySize(); i++) {
@@ -102,7 +99,7 @@ public class GameScreen extends JPanel implements ActionListener {
 		
 		}	
 		
-		}
+		
 		
 		
 }
